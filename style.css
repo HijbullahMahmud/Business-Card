@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 :root {
     --col: #151c26;
     --col0: #1cb63b;
@@ -21,7 +22,9 @@ a {
     text-decoration: none;
 }
 
-body, h2, p {
+body,
+h2,
+p {
     margin: 0;
 }
 
@@ -87,7 +90,8 @@ body, h2, p {
 
 /* move btns // right left */
 
-#prev-btn, #next-btn {
+#prev-btn,
+#next-btn {
     border: 2px solid #ddd;
     top: 15%;
     opacity: .5;
@@ -99,7 +103,8 @@ body, h2, p {
     transition: .6s;
 }
 
-#prev-btn:hover, #next-btn:hover {
+#prev-btn:hover,
+#next-btn:hover {
     opacity: 0.8;
 }
 
@@ -113,7 +118,8 @@ body, h2, p {
     position: absolute;
 }
 
-#prev-btn::after, #next-btn::after {
+#prev-btn::after,
+#next-btn::after {
     content: "";
     border: 15px solid;
     box-sizing: border-box;
@@ -143,10 +149,11 @@ body, h2, p {
     height: 100vh;
     flex-wrap: wrap;
     position: relative;
-    margin:0 10px;
+    margin: 0 10px;
 }
 
-#front, #back {
+#front,
+#back {
     background-color: #fff;
     width: 500px;
     height: 270px;
@@ -156,7 +163,8 @@ body, h2, p {
     box-shadow: 0 0 15px #000;
 }
 
-#front::after, #front::before {
+#front::after,
+#front::before {
     content: "";
     background-color: var(--col0);
     width: 15px;
@@ -191,7 +199,8 @@ body, h2, p {
     color: var(--col0);
 }
 
-#front>p::after, #front>p::before {
+#front>p::after,
+#front>p::before {
     content: "";
     width: 160px;
     height: 4px;
@@ -276,7 +285,8 @@ body, h2, p {
     font-size: 0.8em;
 }
 
-.details #canvas2, .details #canvas3 {
+.details #canvas2,
+.details #canvas3 {
     position: absolute;
 }
 
@@ -354,7 +364,7 @@ i {
         left: calc(50% - 40px);
     }
 }
- 
+
 
 /* Vertical business card */
 
@@ -367,15 +377,46 @@ i {
     font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
-.business-ver .front-ver, .business-ver .back-ver {
+.business-ver .front-ver,
+.business-ver .back-ver {
     background-color: var(--dark);
-    width: 280px;
-    height: 480px;
+    width: 340px;
+    height: 570px;
     margin: 20px;
     border-radius: 25px;
     overflow: hidden;
     color: #eee;
     position: relative;
+}
+
+/* Image container styles */
+.image-container {
+    width: 100px;
+    /* Adjust width as needed */
+    height: 100px;
+    /* Adjust height as needed */
+    border-radius: 50%;
+    /* Make it round */
+    overflow: hidden;
+    /* Hide overflow */
+    position: relative;
+    /* Position relative for centering */
+}
+
+/* Image styles */
+.image-container img {
+    width: 100%;
+    /* Make image fill container */
+    height: auto;
+    /* Maintain aspect ratio */
+    position: absolute;
+    /* Position absolute for centering */
+    top: 50%;
+    /* Move image down by 50% */
+    left: 50%;
+    /* Move image right by 50% */
+    transform: translate(-50%, -50%);
+    /* Center the image */
 }
 
 .business-ver svg {
@@ -391,6 +432,20 @@ i {
     display: flex;
     justify-content: center;
     padding: 25px 0;
+}
+
+.spacer {
+    height: 3em;
+    /* Adjust the height as needed */
+    background-color: #000;
+    /* Black color */
+}
+
+.info-item .center-text {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .front-ver>div:nth-child(1)>div img {
@@ -436,6 +491,41 @@ i {
 .front-ver>div:nth-child(2) p:nth-of-type(1) {
     font-weight: 900;
 }
+
+
+.icon-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.icon-links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.icon-links svg {
+    width: 25px;
+    height: 25px;
+}
+
+
+/* Address icon container styles */
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    /* Adjust as needed */
+}
+
+/* Icon styles */
+.info-item svg {
+    width: 30px;
+    /* Set a fixed width for the icon */
+    margin-right: 10px;
+    /* Adjust spacing between icon and text */
+}
+
 
 .front-ver .infos {
     position: absolute;
